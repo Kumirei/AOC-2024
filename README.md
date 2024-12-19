@@ -1,9 +1,16 @@
 # AOC-2024
 
+$\space
+\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space 1
+\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space 7
+\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space 13
+\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space 19
+\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space 25
+$
+<br>
 **Golang**
-
-| Dec | 0                  | 1                  | 2                  | 3                  | 4                  | 5                  | 6                  | 7                  | 8                  | 9                  |
-| --- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| 00  |                    | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 |
-| 10  | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 | 🌟🌟 |
-| 20  |      **             |          **          |          **          |            **        |          **          |        **            |             -       |               -     |        -            |-
+$\space
+\color{gold}*******************
+\color{Periwinkle}
+\color{lightgray}******
+$
