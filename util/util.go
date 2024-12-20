@@ -284,3 +284,50 @@ func MapList[T, Y any](arr []T, mapper func(x T) Y) []Y {
 func ToString[T any](x T) string {
 	return fmt.Sprint(x)
 }
+
+func GetCardinalNeighbors(pos Point) []Point {
+	neighbors := make([]Point, 0, 4)
+	deltas := []Point{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}
+	for _, delta := range deltas {
+		neighbors = append(neighbors, Point{pos.X + delta.X, pos.Y + delta.Y})
+	}
+	return neighbors
+}
+
+func GetCardinalNeighborsInside(pos Point, xMin, xMax, yMin, yMax int) []Point {
+	neighbors := make([]Point, 0, 4)
+	for _, n := range GetCardinalNeighbors(pos) {
+		if n.Y >= yMin && n.Y <= yMax && n.X >= xMin && n.X <= xMax {
+			neighbors = append(neighbors, n)
+		}
+	}
+	return neighbors
+}
+
+func PointsOfArr[T any](arr [][]T) []Point {
+	points := make([]Point, 0, len(arr)*len(arr[0]))
+	for y, row := range arr {
+		for x := range row {
+			points = append(points, Point{x, y})
+		}
+	}
+	return points
+}
+
+func PrintMatrix[T any](arr [][]T) {
+	for _, row := range arr {
+		for _, cell := range row {
+			fmt.Print(cell)
+		}
+		fmt.Println()
+	}
+}
+
+func PrintIntMatrix(arr [][]int, width int) {
+	for _, row := range arr {
+		for _, cell := range row {
+			fmt.Printf(fmt.Sprintf("%%%dd", width), cell)
+		}
+		fmt.Println()
+	}
+}
