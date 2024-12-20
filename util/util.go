@@ -22,7 +22,7 @@ func ReadInputs(day int) Inputs {
 }
 
 func ReadFile(day int, example bool) string {
-	path := "d" + strconv.Itoa(day) + "/"
+	path := "d" + fmt.Sprintf("%02d", day) + "/"
 	if example {
 		path += "example"
 	} else {
