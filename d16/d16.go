@@ -23,7 +23,7 @@ func Solutions() util.Solutions {
 const INT_MAX = int(^uint(0) >> 1)
 
 func Part1(input string, example bool) string {
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 	start, end := findEnds(data)
 
 	costs, _ := findBestPath(data, start, end)
@@ -33,7 +33,7 @@ func Part1(input string, example bool) string {
 }
 
 func Part2(input string, example bool) string {
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 	start, end := findEnds(data)
 
 	costs, bp := findBestPath(data, start, end)

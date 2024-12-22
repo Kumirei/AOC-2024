@@ -154,7 +154,7 @@ func parse(input string) Data {
 	fmt.Sscanf(parts[0], "Register %s %d\nRegister %s %d\nRegister %s %d", &s, &A, &s, &B, &s, &C)
 	//fmt.Println(A, B, C, s)
 	programStr := strings.Split(parts[1], " ")[1]
-	program := util.Parse2DIntArray(programStr, ",")[0]
+	program := util.ParseIntMatrix(programStr, ",")[0]
 	return Data{A, B, C, program}
 }
 

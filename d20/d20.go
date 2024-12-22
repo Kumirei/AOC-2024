@@ -24,7 +24,7 @@ func Part1(input string, example bool) string {
 	if example {
 		limit = 2
 	}
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 
 	start := findStart(data)
 	costs := getCosts(data, start)
@@ -39,7 +39,7 @@ func Part2(input string, example bool) string {
 	if example {
 		limit = 50
 	}
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 
 	start := findStart(data)
 	costs := getCosts(data, start)

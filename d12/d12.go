@@ -20,7 +20,7 @@ func Solutions() util.Solutions {
 }
 
 func Part1(input string, example bool) string {
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 
 	visited := util.NewSet[util.Point]()
 	sum := 0
@@ -43,7 +43,7 @@ func Part1(input string, example bool) string {
 }
 
 func Part2(input string, example bool) string {
-	data := util.Parse2DCharArray(input)
+	data := util.ParseCharMatrix(input)
 
 	visited := util.NewSet[util.Point]()
 	sum := 0

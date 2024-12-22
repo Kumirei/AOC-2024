@@ -21,7 +21,7 @@ func Solutions() util.Solutions {
 }
 
 func Part1(input string, example bool) string {
-	data := util.Parse2DIntArray(input, ",")
+	data := util.ParseIntMatrix(input, ",")
 	data = getSlice(data, example)
 	width, height := getSize(example)
 	m := coordsToMap(data, width, height)
@@ -31,7 +31,7 @@ func Part1(input string, example bool) string {
 }
 
 func Part2(input string, example bool) string {
-	data := util.Parse2DIntArray(input, ",")
+	data := util.ParseIntMatrix(input, ",")
 	width, height := getSize(example)
 
 	for i := range len(data) {

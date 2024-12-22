@@ -22,7 +22,7 @@ func Solutions() util.Solutions {
 var deltas = []util.Point{{0, -1}, {-1, 0}, {1, 0}, {0, 1}}
 
 func Part1(input string, example bool) string {
-	data := util.Parse2DIntArray(input, "")
+	data := util.ParseIntMatrix(input, "")
 	width, height := len(data[0]), len(data)
 
 	heads := findStarts(data)
@@ -58,7 +58,7 @@ func Part1(input string, example bool) string {
 }
 
 func Part2(input string, example bool) string {
-	data := util.Parse2DIntArray(input, "")
+	data := util.ParseIntMatrix(input, "")
 
 	heads := findStarts(data)
 	count := 0

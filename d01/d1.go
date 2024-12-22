@@ -81,7 +81,7 @@ func totalDistance(data Data) int {
 }
 
 func parse(input string) Data {
-	arr := util.Parse2DIntArray(input, "   ")
+	arr := util.ParseIntMatrix(input, "   ")
 	left := make([]int, 0)
 	right := make([]int, 0)
 	for _, row := range arr {

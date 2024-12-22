@@ -22,12 +22,12 @@ func Solutions() util.Solutions {
 }
 
 func Part1(input string, example bool) string {
-	data := util.Parse2DIntArray(input, " ")
+	data := util.ParseIntMatrix(input, " ")
 	return strconv.Itoa(solve(data, false))
 }
 
 func Part2(input string, example bool) string {
-	data := util.Parse2DIntArray(input, " ")
+	data := util.ParseIntMatrix(input, " ")
 	return strconv.Itoa(solve(data, true))
 }
 

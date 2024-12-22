@@ -70,7 +70,7 @@ func blink(stones Stones) Stones {
 }
 
 func parse(input string) Stones {
-	arr := util.Parse2DIntArray(input, " ")[0]
+	arr := util.ParseIntMatrix(input, " ")[0]
 	stones := make(Stones)
 	for _, stone := range arr {
 		count := stones[stone]

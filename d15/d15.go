@@ -153,7 +153,7 @@ func parse(input string) *Data {
 	parts := strings.Split(input, "\n\n")
 
 	data := Data{Map: make(Map), Moves: make([]Move, 0)}
-	arr := util.Parse2DCharArray(parts[0])
+	arr := util.ParseCharMatrix(parts[0])
 	data.Height = len(arr)
 	data.Width = len(arr[0])
 	for y, line := range arr {

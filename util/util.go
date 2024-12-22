@@ -38,33 +38,50 @@ func ReadFile(day int, example bool) string {
 	return strings.TrimSpace(string(data))
 }
 
-func Parse2DIntArray(input string, delimiter string) [][]int {
+func ParseIntMatrix(input string, delimiter string) [][]int {
 	parser := func(str string) (int, bool) {
 		n, err := strconv.Atoi(str)
 		return n, err == nil
 	}
-	return parse2DArray(input, "\n", delimiter, parser)
+	return parseMatrix(input, "\n", delimiter, parser)
 }
 
-func Parse2DCharArray(input string) [][]string {
+func ParseIntArray(input string, delimiter string) []int {
+	parser := func(str string) (int, bool) {
+		n, err := strconv.Atoi(str)
+		return n, err == nil
+	}
+	return ParseArray(input, delimiter, parser)
+}
+
+func ParseCharArray(input string, delimiter string) []string {
 	parser := func(str string) (string, bool) { return str, true }
-	return parse2DArray(input, "\n", "", parser)
+	return ParseArray(input, delimiter, parser)
 }
 
-func parse2DArray[T any](input string, lineDel string, cellDel string, parser func(str string) (T, bool)) [][]T {
+func ParseCharMatrix(input string) [][]string {
+	parser := func(str string) (string, bool) { return str, true }
+	return parseMatrix(input, "\n", "", parser)
+}
+
+func ParseArray[T any](input string, del string, parser func(str string) (T, bool)) []T {
+	arr := make([]T, 0)
+	cells := strings.Split(input, del)
+	for _, cell := range cells {
+		num, ok := parser(cell)
+		if ok {
+			arr = append(arr, num)
+		}
+	}
+	return arr
+}
+
+func parseMatrix[T any](input string, lineDel string, cellDel string, parser func(str string) (T, bool)) [][]T {
 	data := make([][]T, 0)
 
 	lines := strings.Split(input, lineDel)
 	for _, line := range lines {
-		row := make([]T, 0)
-		cells := strings.Split(line, cellDel)
-		for _, cell := range cells {
-			num, ok := parser(cell)
-			if ok {
-				row = append(row, num)
-			}
-		}
-		data = append(data, row)
+		data = append(data, ParseArray(line, cellDel, parser))
 	}
 
 	return data
