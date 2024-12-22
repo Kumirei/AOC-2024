@@ -1,7 +1,7 @@
 package main
 
 import (
-	"awesomeProject/d21"
+	"awesomeProject/d22"
 	"awesomeProject/util"
 )
 
@@ -26,5 +26,6 @@ func main() {
 	//util.Run(d18.Solutions()) // Takes 2 seconds
 	//util.Run(d19.Solutions())
 	//util.Run(d20.Solutions())
-	util.Run(d21.Solutions())
+	//util.Run(d21.Solutions())
+	util.Run(d22.Solutions()) // Takes 2 seconds
 }
