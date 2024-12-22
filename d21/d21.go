@@ -15,7 +15,7 @@ func Solutions() util.Solutions {
 		},
 		Part2: util.Solution{
 			Solver:   Part2,
-			Expected: util.Expected{Example: "154115708116294", Real: "???"},
+			Expected: util.Expected{Example: "154115708116294", Real: "198466286401228"},
 		},
 	}
 }
