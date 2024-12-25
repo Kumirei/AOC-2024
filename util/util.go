@@ -60,8 +60,12 @@ func ParseCharArray(input string, delimiter string) []string {
 }
 
 func ParseCharMatrix(input string) [][]string {
+	return ParseStringMatrix(input, "")
+}
+
+func ParseStringMatrix(input string, delimiter string) [][]string {
 	parser := func(str string) (string, bool) { return str, true }
-	return parseMatrix(input, "\n", "", parser)
+	return parseMatrix(input, "\n", delimiter, parser)
 }
 
 func ParseArray[T any](input string, del string, parser func(str string) (T, bool)) []T {

@@ -104,6 +104,12 @@ func (s *Set[T]) Combine(s2 *Set[T]) {
 	}
 }
 
-func (s *Set[T]) String() string {
+func (s Set[T]) String() string {
 	return fmt.Sprint(s.ToList())
+}
+
+func (s *Set[T]) Clone() *Set[T] {
+	clone := NewSet[T]()
+	clone.Combine(s)
+	return clone
 }
