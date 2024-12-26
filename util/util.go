@@ -133,7 +133,7 @@ func Run(solutions Solutions) {
 	}
 
 	ok = RunReal(solutions.Day, solutions.Part1)
-	if !ok {
+	if !ok || solutions.Day == 25 {
 		return
 	}
 

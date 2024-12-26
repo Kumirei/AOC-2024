@@ -10,7 +10,7 @@ $
 <br>
 **Golang**
 $\space
-\color{gold}**********************
+\color{gold}*************************
 \color{Periwinkle}
-\color{lightgray}***
+\color{lightgray}
 $
