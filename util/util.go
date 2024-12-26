@@ -149,7 +149,7 @@ func Run(solutions Solutions) {
 func RunExample(day int, part Solution) bool {
 	exampleInput := ReadFile(day, true)
 	if part.ExampleInput != "" {
-		exampleInput = part.ExampleInput
+		exampleInput = strings.TrimSpace(part.ExampleInput)
 	}
 	example := part.Solver(exampleInput, true)
 	pass := example == part.Expected.Example
